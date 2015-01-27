@@ -6,6 +6,8 @@ var defaultTemplate = '<div data-hook="calendar"></div>';
 
 module.exports = AmpersandView.extend({
   render: function () {
+    var self = this;
+
     this.template = this.template || defaultTemplate;
 
     this.renderWithTemplate();
@@ -20,7 +22,12 @@ module.exports = AmpersandView.extend({
       events: events,
     };
 
-    jquery('[data-hook~=calendar]').fullCalendar(options);
+    jquery(self.el).fullCalendar(options);
+
+    setTimeout(function () {
+      jquery(self.el).fullCalendar('render');
+    }, 100);
+
   },
   props: {
     defaultDate: 'date',
