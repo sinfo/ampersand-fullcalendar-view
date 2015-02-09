@@ -1,7 +1,7 @@
 {
   "name": "ampersand-fullcalendar-view",
   "description": "Visualize your events using FullCalendar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Francisco Dias <francisco@baiodias.com>",
   "browserify": {
     "transform": [
