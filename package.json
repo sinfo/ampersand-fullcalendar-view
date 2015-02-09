@@ -28,6 +28,7 @@
     }
   },
   "dependencies": {
+    "amp-extend": "^1.0.1",
     "ampersand-version": "^1.0.0",
     "ampersand-view": "^7.2.0",
     "browserify-shim": "^3.8.2"

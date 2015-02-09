@@ -1,6 +1,7 @@
 var AmpersandView = require('ampersand-view');
 var jquery = require('jquery');
 var fullcalendar = require('fullcalendar');
+var extend = require('amp-extend');
 
 var defaultTemplate = '<div data-hook="calendar"></div>';
 
@@ -22,6 +23,8 @@ module.exports = AmpersandView.extend({
       events: events,
     };
 
+    extend(options, this.options);
+
     jquery(self.el).fullCalendar(options);
 
     setTimeout(function () {
@@ -35,5 +38,6 @@ module.exports = AmpersandView.extend({
     eventLimit: 'boolean',
     header: 'any',
     events: 'any',
+    options: 'object'
   }
 });
